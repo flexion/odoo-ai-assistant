@@ -1,0 +1,119 @@
+{
+  "sources": [
+    {
+      "name": "Odoo 18 Developer Tutorials",
+      "url": "https://www.odoo.com/documentation/18.0/developer/tutorials.html",
+      "type": "html",
+      "max_pages": 50,
+      "description": "Step-by-step Odoo 18 development tutorials (2024) - module creation, ORM, views",
+      "priority": "high"
+    },
+    {
+      "name": "Odoo 18 Accounting - Tax Configuration",
+      "url": "https://www.odoo.com/documentation/18.0/applications/finance/accounting/taxes.html",
+      "type": "html",
+      "max_pages": 30,
+      "description": "Odoo 18 tax setup guide - cash basis, fiscal positions, tax reports (2024)",
+      "priority": "high"
+    },
+    {
+      "name": "Odoo 18 E-invoicing and Peppol",
+      "url": "https://www.odoo.com/documentation/18.0/applications/finance/accounting/customer_invoices/electronic_invoicing.html",
+      "type": "html",
+      "max_pages": 25,
+      "description": "Odoo 18 electronic invoicing - Peppol setup, deregistration, troubleshooting (2024)",
+      "priority": "high"
+    },
+    {
+      "name": "Odoo 18 ORM Performance Tips",
+      "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+      "type": "html",
+      "max_pages": 40,
+      "description": "Odoo 18 ORM best practices - recordset partitioning, batch operations, performance",
+      "priority": "high"
+    },
+    {
+      "name": "Odoo 18 Developer Documentation",
+      "url": "https://www.odoo.com/documentation/18.0/developer.html",
+      "type": "developer"
+    },
+    {
+      "name": "Odoo 18 User Documentation",
+      "url": "https://www.odoo.com/documentation/18.0/applications.html",
+      "type": "user"
+    },
+    {
+      "name": "Odoo ORM API Reference",
+      "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+      "type": "developer"
+    },
+    {
+      "name": "Odoo Security Documentation",
+      "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+      "type": "developer"
+    },
+    {
+      "name": "odoo_18_user_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/applications.html",
+      "type": "html",
+      "max_pages": 100,
+      "description": "Official Odoo 18 user documentation"
+    },
+    {
+      "name": "odoo_sales_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/applications/sales.html",
+      "type": "html",
+      "max_pages": 50,
+      "description": "Odoo Sales app documentation - quotations, orders, products"
+    },
+    {
+      "name": "odoo_crm_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/applications/sales/crm.html",
+      "type": "html",
+      "max_pages": 40,
+      "description": "Odoo CRM documentation - leads, opportunities, customers"
+    },
+    {
+      "name": "odoo_inventory_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/applications/inventory_and_mrp.html",
+      "type": "html",
+      "max_pages": 50,
+      "description": "Odoo Inventory and MRP documentation"
+    },
+    {
+      "name": "odoo_accounting_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/applications/finance.html",
+      "type": "html",
+      "max_pages": 50,
+      "description": "Odoo Accounting/Invoicing documentation"
+    },
+    {
+      "name": "odoo_website_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/applications/websites.html",
+      "type": "html",
+      "max_pages": 40,
+      "description": "Odoo Website and eCommerce documentation"
+    },
+    {
+      "name": "odoo_18_developer_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/developer.html",
+      "type": "html",
+      "max_pages": 50,
+      "description": "Official Odoo 18 developer documentation"
+    },
+    {
+      "name": "odoo_orm_api_reference",
+      "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/orm.html",
+      "type": "html",
+      "max_pages": 30,
+      "description": "Odoo ORM API reference"
+    },
+    {
+      "name": "odoo_security_documentation",
+      "url": "https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html",
+      "type": "html",
+      "max_pages": 20,
+      "description": "Odoo security and access rights"
+    }
+  ]
+}

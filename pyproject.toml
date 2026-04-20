@@ -1,0 +1,74 @@
+[project]
+name = "odoo-rag"
+version = "1.0.0"
+description = "Odoo 18 RAG + Multi-Model Comparison"
+requires-python = ">=3.12"
+dependencies = [
+    "boto3>=1.34.0",
+    "faiss-cpu>=1.8.0",
+    "gradio>=5.0.0",
+    "nltk>=3.8.0",
+    "numpy>=1.26.0",
+    "requests>=2.31.0",
+    "rouge-score>=0.1.2",
+    "sentence-transformers>=3.0.0",
+    "scikit-learn>=1.4.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.0.0",
+    "plotly>=5.18.0",
+    "pandas>=2.1.0",
+    "transformers>=4.36.0",
+    "torch>=2.1.0",
+    "huggingface_hub>=0.20.0",
+]
+
+[project.optional-dependencies]
+deploy = [
+    "aws-cdk-lib>=2.0.0",
+    "constructs>=10.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.8.0",
+]
+
+[project.scripts]
+odoo-chat = "odoo_rag.app:main"
+odoo-compare = "odoo_rag.evaluator:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "infrastructure/cdk.out",
+    "*.egg-info",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "E402",  # Module level import not at top of file (intentional for warnings filters)
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.coverage.run]
+omit = [
+    "*/scripts/*",  # Utility scripts
+    "*/generate_qa.py",  # Unused module (replaced by manual data curation)
+    "*/tests/*",
+    "*/app.py",  # Gradio UI - core business logic tested separately, UI verified manually
+    "*/__pycache__/*",
+    "*/.venv/*",
+]

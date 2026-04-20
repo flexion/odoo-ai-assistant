@@ -1,0 +1,31 @@
+# Dockerfile for Lambda pipeline function
+FROM public.ecr.aws/lambda/python:3.12
+
+# Install system dependencies (Lambda Python 3.12 uses microdnf)
+RUN microdnf install -y gcc gcc-c++ make && \
+    microdnf clean all
+
+# Set working directory
+WORKDIR ${LAMBDA_TASK_ROOT}
+
+# Copy requirements first for better caching
+COPY infrastructure/requirements-lambda.txt ./
+
+# Install minimal Python dependencies (no torch/CUDA)
+RUN pip install --no-cache-dir -r requirements-lambda.txt && \
+    rm -rf /root/.cache/pip requirements-lambda.txt
+
+# Copy source code and pyproject.toml for package installation
+COPY src/ ./src/
+COPY pyproject.toml ./
+
+# Install odoo_rag package so it's importable
+RUN pip install --no-cache-dir -e . && \
+    rm -rf /root/.cache/pip
+
+# Copy infrastructure module
+COPY infrastructure/__init__.py ./infrastructure/
+COPY infrastructure/lambda_pipeline.py ./infrastructure/
+
+# Set the Lambda handler
+CMD ["infrastructure.lambda_pipeline.lambda_handler"]
