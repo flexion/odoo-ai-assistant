@@ -127,7 +127,7 @@ def calculate_context_recall(
         embedder: SentenceTransformer model for encoding text
 
     Returns:
-        Recall score between 0.0 and 1.0
+        Similarity score between 0.0 and 1.0
     """
     if not answer or not context:
         return 0.0
