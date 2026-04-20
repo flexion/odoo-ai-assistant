@@ -2,7 +2,10 @@
 
 **Live Demo:** [http://odoora-odoor-7wtdidhrbsyq-1645184910.us-east-1.elb.amazonaws.com](http://odoora-odoor-7wtdidhrbsyq-1645184910.us-east-1.elb.amazonaws.com)
 
-*To get current URL: `aws cloudformation describe-stacks --stack-name OdooRagAppStack --query 'Stacks[0].Outputs[?OutputKey==\`AppUrl\`].OutputValue' --output text`*
+*To get current URL if it changes:*
+```bash
+aws cloudformation describe-stacks --stack-name OdooRagAppStack --query 'Stacks[0].Outputs[?OutputKey==`AppUrl`].OutputValue' --output text
+```
 
 AI-powered Odoo 18 documentation assistant with multi-model comparison and RAG metrics. Compare 9 AWS Bedrock models side-by-side on cost, latency, and answer quality.
 
@@ -293,5 +296,3 @@ Key architectural decisions and lessons learned:
 - RAG vs fine-tuning decision (faster iteration, enables multi-model comparison)
 - Chunking strategy (word-based outperformed semantic chunking)
 - Single-question evaluation (more stable than multi-question averaging)
-
-**Details:** [3_reflections.md](docs/3_reflections.md)
